@@ -7,6 +7,8 @@ const SignUp = ({ setAuthToggle }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [isLoading,setIsLoading] = useState(false);
+
   const setFormDataDefault = () => {
     setUsername("");
     setEmail("");
@@ -18,18 +20,24 @@ const SignUp = ({ setAuthToggle }) => {
     if (username === "" || password === "" || confirmPassword === "" || email === "") {
       return;
     }
+    if(isLoading){
+      return;
+    }
     const API = process.env.REACT_APP_API;
     const url = `${API}user/signin`;
     const method = "POST";
     const body = { name: username, username: username, email: email, password: password, confirm_password: confirmPassword };
+    setIsLoading(true);
     const response = await publicApiCall(url, method, body);
     if (!response?.data) {
       toast.error(response?.error?.message);
+      setIsLoading(false);
       return;
     }
     toast.success(response.message);
     setAuthToggle(false);
     setFormDataDefault();
+    setIsLoading(true); 
   };
   return (
     <form onSubmit={handleSignUp} className="signup">
@@ -47,7 +55,7 @@ const SignUp = ({ setAuthToggle }) => {
       </div>
       <div className="field btn">
         <div className="btn-layer"></div>
-        <input type="submit" value="Signup" />
+        <input type="submit" value={isLoading?"Loading...":"Signup"} />
       </div>
       <div className="signup-link">
         already a member? <a onClick={() => setAuthToggle(false)}>login now</a>

@@ -67,7 +67,6 @@ const ListCard = ({list,id,setIsFetchList,dragTaskId,setDragTaskId}) => {
         }
     }
 
-  console.log(tasksComplete,Tasks)
   return (
     <div className='list_card' >
         <div className='list_card_header'>
