@@ -75,7 +75,7 @@ const ListCard = ({list,id,setIsFetchList,dragTaskId,setDragTaskId}) => {
         </div>
         <div className='list_card_div'ref={myRef} id='jigar' onDrop={handleDrop} onDragOver={handleDragOver}> 
             {Tasks?.map((task,key)=>
-            <div key={key} id={key+''+task.id} className='task_card_div'onDragStart={handleDragStart} draggable={!isLoading && !tasksComplete.includes((task.id).toString())} >
+            <div key={key+''+task.id} id={key+''+task.id} className='task_card_div'onDragStart={handleDragStart} draggable={!isLoading && !tasksComplete.includes((task.id).toString())} >
                 <TaskCard task={task} index={key} setTasksComplete={setTasksComplete} checkedValue={checkedValue} setCheckedValue={setCheckedValue}/>
             </div>)}
         </div>

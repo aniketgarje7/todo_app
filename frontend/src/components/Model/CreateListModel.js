@@ -34,10 +34,11 @@ const CreateListModel = ({setShow,setIsFetchList}) => {
 		const response = await authApiCall(url,method,body);
 		if(!response.data || response.error){
 		  toast.error(response.message);
+		  setIsLoading(false);
 		  return;
 		}
 		toast.success(response.message);
-		setIsFetchList((pre)=>!pre);
+		setIsFetchList(pre=>!pre);
 		setShow(false);
 		setIsLoading(false);
 	}
