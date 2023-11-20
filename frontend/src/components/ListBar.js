@@ -46,7 +46,7 @@ const ListBar = ({ user }) => {
   return (
     <div className="list_bar">
       {listData.map((list, key) => (
-        <div key={key}>
+        <div key={key+''+list.id}>
           <ListCard list={list} id={key} setIsFetchList={setIsFetchList} dragTaskId={dragTaskId} setDragTaskId={setDragTaskId} />
         </div>
       ))}
