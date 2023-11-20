@@ -38,7 +38,7 @@ const CreateListModel = ({setShow,setIsFetchList}) => {
 		  return;
 		}
 		toast.success(response.message);
-		window.location.reload();
+		setIsFetchList(pre=>!pre);
 		setShow(false);
 		setIsLoading(false);
 	}
