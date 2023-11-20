@@ -1,0 +1,91 @@
+.navbar_ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  background-color: rgb(121, 121, 120);
+  font-size: 18px;
+  color: #000000;
+  font-weight: 600;
+  margin: 0;
+}
+.navbar_div{
+  background-color: rgb(121, 121, 120);
+}
+.list_bar{
+  display: flex;
+  gap: 15px;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  margin: 20px 30px;
+  overflow-y: hidden;
+}
+.list_card{
+  min-height: 400px;
+  width: 340px;
+  border-radius: 8px;
+  background-color: #aaa6a6 !important;
+}
+.list_card_div{
+  height: 400px;
+  min-height: inherit;
+  overflow-y: scroll;
+}
+.create_list_card{
+  height: 200px;
+  width: 340px;
+  border-radius: 8px;
+  background-color: #aaa6a6 !important;
+}
+.list_card_header{
+  padding: 10px 5px;
+  background-color: rgb(121, 121, 120);
+  border-radius: 8px 8px 4px 4px;
+  text-align: center;
+}
+.task_card{
+  padding: 10px 10px;
+  background-color: #ffffff;
+  cursor: grab;
+  border-radius: 10px;
+}
+.task_card_div{
+  margin: 15px 10px;
+}
+.task_input{
+  cursor: pointer;
+  font-size: 20px;
+}
+.task_name{
+  padding-left: 10px;
+}
+.plus_icon_div{
+  text-align: center;
+  margin-top: 30px;
+}
+.plus_icon{
+  font-size: 60px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.clip_loader{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.logout_button{
+  cursor: pointer;
+}
+.delete_selected{
+  margin: 7px 3px;
+  padding-bottom: 4px;
+}
+.delete_selected_button{
+  width: 100%;
+  padding: 4px;
+  cursor: pointer;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
