@@ -1,7 +1,7 @@
 #Todo App
 
 <p align="center">
-  <img src="frontend/public/blogDemo.png" alt="demo" />
+  <img src="frontend/public/todo_app.png" alt="demo" />
 </p
 
 Here you can create List Blogs and manage Your tasks. 
